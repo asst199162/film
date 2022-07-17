@@ -1,0 +1,31 @@
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
+
+// Стили для файла с примером HTML-фрагмента
+
+@import '../sass/base/reset'; //сброс стилей+
+@import '../sass/utils/varibles'; //цвета+
+@import '../sass/utils/mixins';//+
+@import '../sass/base/common'; //body+
+@import '../sass/utils/placeholder'; //animation+++
+
+@import '../sass/components/container';//+
+@import '../sass/components/sections';//+
+@import '../sass/components/button'; //+++++
+
+@import '../sass/layout/header';//++++
+@import '../sass/layout/header-my-lib';//++++
+@import '../sass/layout/gallery'; //+++++
+@import '../sass/layout/gallery-my-lib';//+++
+@import '../sass/layout/modal/modal-my-lib';//+++
+@import '../sass/layout/modal/modal'; //+++
+@import '../sass/layout/my-library'; //++++
+
+@import '../sass/layout/numeration-my-lib'; //++++
+@import '../sass/layout/numeration'; //++++
+
+
+@import '../sass/layout/footer';//++++
+@import '../sass/layout/footer-my-lib'; //++++
