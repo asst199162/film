@@ -1,0 +1,59 @@
+.gallery {
+    width: 100%;
+    margin-top: 20px; //уброть после изменения хедера!!!!!!!!!!
+    margin-bottom: -20px;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -32px;
+        margin-bottom: 0px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-right: -16px;
+    }
+}
+
+.gallery__item {
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+        flex-basis: calc(100% / 2 - 32px);
+        margin-right: 32px;
+        margin-bottom: 32px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc(100% / 3 - 16px);
+        margin-right: 16px;
+    }
+}
+
+.gallery__img {
+    width: 100%;
+    margin-bottom: 10px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 8px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 12px;
+        }
+
+}
+.gallery__name {
+    color: var(--title-text-color);
+    @include font(12px, 700, 1.14);   
+        @media screen and (min-width: 1200px) {
+            @include font(20px, 700, 1.02);
+        }
+        margin-bottom: 4px;
+}
+
+.gallery__information {
+    color: var(--description-text-color);
+    @include font(12px, 700, 1.14);
+    
+        @media screen and (min-width: 1200px) {
+            @include font(20px, 700, 1.02);
+        }  
+}
