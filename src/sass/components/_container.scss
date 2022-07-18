@@ -20,10 +20,34 @@
 //     }
 // }
 
+// .container {
+//     width: 1216px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     padding-left: 32px;
+//     padding-right: 32px;
+// }
+
 .container {
-    width: 1216px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 32px;
-    padding-right: 32px;
+
+    @media screen and (min-width: 480px) {
+        width: 480px;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 768px;
+        padding-left: 32px;
+        padding-right: 32px;
+        margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 1200px;
+    }
 }
