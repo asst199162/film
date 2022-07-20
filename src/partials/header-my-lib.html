@@ -1,7 +1,32 @@
-<div data-header-my-lib-buttons>
-  <button class="blob-btn" data-action="watched">
+<header class="header">
+    <div class="container">
+        <div class="header_wrappper">
+            <div class="logo">
+                <a class="logo_svg" href="#"><svg class="header_icon" width="24" height="24">
+            <use
+              href="/src/images/images-header-lib/logo_filmoteka.svg#icon-film"
+            ></use>
+          </svg>
+        </a>
+                <a class="logo_name" href="">Filmoteka </a>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav_list list">
+                    <li class="nav_item">
+                        <a class="nav_link nav_link--current" href="./index.html">home</a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a class="nav_link" href="./my-library.html">my library</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div data-header-my-lib-buttons>
+            <button class="blob-btn" data-action="watched">
     Watched
-    <span class="blob-btn__inner">
+    <span class="blob-btn_inner">
       <span class="blob-btn__blobs">
         <span class="blob-btn__blob"></span>
         <span class="blob-btn__blob"></span>
@@ -11,7 +36,7 @@
     </span>
   </button>
 
-  <button class="blob-btn" data-action="queue">
+            <button class="blob-btn" data-action="queue">
     Queue
     <span class="blob-btn__inner">
       <span class="blob-btn__blobs">
@@ -22,4 +47,7 @@
       </span>
     </span>
   </button>
-</div>
+        </div>
+
+    </div>
+</header>
