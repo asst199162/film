@@ -1,5 +1,6 @@
+
 const input = document.querySelector('[data-action="input"]');
-const gallery = document.querySelector('[data-gllery]');
+export const gallery = document.querySelector('[data-gallery]');
 const pagination = document.querySelector('[data-pagination]');
 const modal = document.querySelector('[data-modal]');
 const headerMyLibButtons = document.querySelector(
