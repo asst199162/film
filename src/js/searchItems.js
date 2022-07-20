@@ -11,78 +11,61 @@ let inputValue = '';
 
 refs.searchBtn.addEventListener('submit', onSearchItems);
 
-function onSearchItems(e) {
+//Получение данных с инпута
+async function onSearchItems(e) {
   e.preventDefault();
-  clearMarkup()
-  clearInput();
-  inputValue = refs.input.value.trim();
+  // clearMarkup();
 
-  if (inputValue === '' ) {
-    refs.success.classList.add("visible")
+  inputValue = refs.input.value.trim();
+  console.log(inputValue);
+
+  resetPage();
+
+  // Проверка инпута на пустую строку
+
+  if (inputValue === '') {
+    refs.success.classList.add('visible');
+    return;
+  } else {
+    refs.success.classList.remove('visible');
+  }
+  try {
+    const response = await fetchMovie(inputValue);
+    console.log(response);
+    if (response.data.results.length === 0) {
+      refs.success.classList.add('visible');
+    }
+    clearInput();
+  } catch (error) {
+    console.log(error);
+  }
 }
-else{
-    clearMarkup()
-}
-  fetchMovie(inputValue);
-  //   resetPage();
-}
+
+// Запрос на API
 
 const API_KEY = '35e417e69f137291206951efd172c8b1';
-let PAGE = 1;
+let DEFAULT_PAGE = 1;
 
 const BASE_URL = 'https://api.themoviedb.org/3/search/movie';
 
 async function fetchMovie(inputValue) {
-  const URL = `${BASE_URL}?api_key=${API_KEY}&query='${inputValue}'&language=en-US&page=${PAGE}`;
+  const URL = `${BASE_URL}?api_key=${API_KEY}&query='${inputValue}'&language=ru&page=${DEFAULT_PAGE}`;
   const response = await axios.get(URL);
 
-  PAGE += 1;
-  console.log(response);
-  return response;
+  // DEFAULT_PAGE += 1;
+
+  return response.data.results;
 }
 
-function clearMarkup() {
-  refs.gallery.innerHTML = '';
+function resetPage() {
+  return (DEFAULT_PAGE = 1);
 }
+
+// function clearMarkup() {
+//   refs.gallery.innerHTML = '';
+// }
 function clearInput() {
   refs.searchBtn.reset();
 }
-// function resetPage() {
-//   return (DEFAULT_PAGE = 1);
-// }
 
-// async function onFormSubmit(e) {
-//   e.preventDefault();
-//   loadMoreButton.classList.remove('hide');
-//   clearMarkup();
-//   inputValue = form.elements.searchQuery.value.trim();
-//   resetPage();
-
-//   console.log(inputValue);
-//   if (inputValue === '') {
-//     Notify.info('"Please make an inquiry"');
-//     return;
-//   }
-//   try {
-//     const response = await fetchPhoto(inputValue);
-//     if (response.data.hits.length !== 0) {
-//       console.log(response.data.hits);
-
-//       Notify.success(`We found ${response.data.totalHits}images`);
-
-//       const createMarkup = response.data.hits.map(createCardsMarkup).join('');
-//       cards.insertAdjacentHTML('beforeend', createMarkup);
-//       loadMoreButton.classList.add('hide');
-//       lightbox.refresh();
-//     } else {
-//       Notify.failure(
-//         '"Sorry, there are no images matching your search query. Please try again."'
-//       );
-//       loadMoreButton.classList.remove('hide');
-//     }
-//     clearInput();
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
 export { fetchMovie };
