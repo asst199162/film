@@ -1,4 +1,5 @@
 import * as references from './js/references';
+import { getGenre } from './js/genresOfMovies';
 import * as searchItems from './js/searchItems';
 import * as createGallery from './js/createGallery';
 import * as numeration from './js/createNumeration';
