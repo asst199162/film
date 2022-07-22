@@ -1,37 +1,23 @@
-     .list {
-         padding: 0;
-         margin: 0;
-         list-style: none;
-     }
-     
-     a {
-         text-decoration: none;
-     }
-     
-     .header {
-         // position: relative;
-         background-image: url(../images/header-images/mob-background-library-2x.jpg);
+     .header-my-lib {
+         background-image: url(../images/images-header-lib/mob-background-library-1x.jpg);
          background-position: center;
          background-size: cover;
          margin: 0 auto;
          background-repeat: no-repeat;
          @media screen and (min-width: 768px) {
-             background-image: url(../images/header-images/tab-background-library-2x.jpg);
+             background-image: url(../images/images-header-lib/tab-background-library-1x.jpg);
          }
          @media screen and (min-width: 1280px) {
-             background-image: url(../images/header-images/desk-background-library-2x.jpg);
+             background-image: url(../images/images-header-lib/desk-background-library-1x.jpg);
          }
      }
      
-     .header_container {
+     .header-my-lib_container {
          max-width: 100%;
          padding-left: 20px;
          padding-right: 20px;
          margin-left: auto;
          margin-right: auto;
-         // @media screen and (min-width: 320px) {
-         //   width: 320px;
-         // }
          @media screen and (min-width: 768px) {
              width: 789px;
          }
@@ -40,11 +26,9 @@
          }
      }
      
-     .header_wrappper {
-         // position: relative;
+     .header-my-lib_wrappper {
          display: flex;
          justify-content: space-between;
-         // position: relative;
      }
      
      .logo {
@@ -53,8 +37,6 @@
      
      .logo_svg {
          margin-right: 8px;
-         // padding-top: 40px;
-         // padding-bottom: 166px;
      }
      
      .logo_name {
@@ -94,70 +76,18 @@
          bottom: -3px;
          width: 100%;
          height: 3px;
-         background-color: #ff001b;
+         background-color: #ff0000;
      }
      
-     .form {
-         width: 280px;
-         position: relative;
-         margin-top: 54px;
-         margin-bottom: 16px;
-         margin-left: auto;
-         margin-right: auto;
-         @media screen and (min-width: 768px) {
-             width: 336px;
-             margin-bottom: 20px;
-         }
-         @media screen and (min-width: 1280px) {
-             width: 394px;
-         }
+     .button-wrapper {
+         display: flex;
+         justify-content: center;
+         margin-top: 15px;
+         padding: 42px;
      }
      
-     .form_input {
-         width: 280px;
-         border: none;
-         outline: none;
-         border-bottom: 0.5px solid #ffffff;
-         font-size: 16px;
-         background: none;
-         color: #ffffff;
-         @media screen and (min-width: 768px) {
-             width: 336px;
-         }
-         @media screen and (min-width: 1280px) {
-             width: 394px;
-         }
-     }
-     
-     .form_input::placeholder {
-         font-size: 14px;
-         line-height: 1.14;
-         position: absolute;
-         left: 0px;
-         font-weight: 400;
-         color: #ffffff;
-     }
-     
-     .form_button {
-         position: absolute;
-         right: -6px;
-         background-color: transparent;
-         border: none;
-     }
-     
-     .alert {
-         padding-bottom: 45px;
-         margin: 0 auto;
-         max-width: 280px;
-         color: #ff001b;
-         font-weight: 400;
-         font-size: 14px;
-         line-height: 1.14;
-         @media screen and (min-width: 767px) {
-             max-width: 393px;
-             // padding-bottom: 45px;
-         }
-         @media screen and (min-width: 1280px) {
-             max-width: 394px;
-         }
+     .blob-btn {
+         width: 148px;
+         height: 42px;
+         margin: 8px;
      }
