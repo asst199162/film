@@ -8,7 +8,7 @@
         margin-right: -32px;
         margin-bottom: 0px;
     }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
         margin-right: -16px;
     }
 }
@@ -22,7 +22,7 @@
         margin-bottom: 32px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
         flex-basis: calc(100% / 3 - 16px);
         margin-right: 16px;
     }
@@ -34,7 +34,7 @@
     @media screen and (min-width: 768px) {
         margin-bottom: 8px;
     }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
         margin-bottom: 12px;
         }
 
@@ -42,7 +42,7 @@
 .gallery__name {
     color: var(--title-text-color);
     @include font(12px, 700, 1.14);   
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: 1280px) {
             @include font(20px, 700, 1.02);
         }
         margin-bottom: 4px;
@@ -52,7 +52,7 @@
     color: var(--description-text-color);
     @include font(12px, 700, 1.14);
     
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: 1280px) {
             @include font(20px, 700, 1.02);
         }  
 }
