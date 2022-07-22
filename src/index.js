@@ -9,3 +9,4 @@ import { onFirstLoadPage } from './js/onFirstLoadPage';
 // import * as onWatchedAndQueueClick from './js/onWatchedAndQueueClick';
 // import * as onAddToWatchedAndAddToQueueClick from './js/onAddToWatchedAndAddToQueueClick';
 // import * as loader from './js/loader';
+import * as modal from './js/modal';
