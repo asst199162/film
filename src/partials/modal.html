@@ -1,25 +1,43 @@
-<div class="modal" data-modal>
-  <button class="blob-btn blob-btn-modal" data-action="addToWatched">
-    add to Watched
-    <span class="blob-btn__inner">
-      <span class="blob-btn__blobs">
-        <span class="blob-btn__blob"></span>
-        <span class="blob-btn__blob"></span>
-        <span class="blob-btn__blob"></span>
-        <span class="blob-btn__blob"></span>
-      </span>
-    </span>
-  </button>
-
-  <button class="blob-btn blob-btn-modal" data-action="addToQueue">
-    add to Queue
-    <span class="blob-btn__inner">
-      <span class="blob-btn__blobs">
-        <span class="blob-btn__blob"></span>
-        <span class="blob-btn__blob"></span>
-        <span class="blob-btn__blob"></span>
-        <span class="blob-btn__blob"></span>
-      </span>
-    </span>
-  </button>
+<div class="backdrop" data-modal>
+  <div class="movie-card">
+    <button type="btn" class="movie-card__close-btn" data-modal-close>
+      <svg class="modal-icon__close" width="30" height="30">
+        <use href="/src/images/modalka-icon-close.svg#icon-close"></use>
+      </svg>
+    </button>
+    <div class="movie-card__item">
+      <img src="./images/noCover.gif" class="movie-card__poster" />
+    </div>
+    <div class="movie-card__item">
+      <h1 class="movie-card__title"> MOVIE TITLE </h1>
+      <ul class="movie-card__info">
+        <li class="movie-card__info--item">
+          <h2 class="movie-card__info--title"> Vote / Votes </h2>
+          <p class="movie-card__content--item"><span class="movie-card__vote"> 0.0 </span> / 000 </p>
+        </li>
+        <li class="movie-card__info--item">
+          <h2 class="movie-card__info--title"> Popularity </h2>
+          <p class="movie-card__content--item"> 0.0 </p>
+        </li>
+        <li class="movie-card__info--item">
+          <h2 class="movie-card__info--title"> Original Title </h2>
+          <p class="movie-card__content--item"> Movie Title </p>
+        </li>
+        <li class="movie-card__info--item">
+          <h2 class="movie-card__info--title"> Genre </h2>
+          <p class="movie-card__content--item"> Movie Genre </p>
+      </ul>
+      <h2 class="movie-card__about">About</h2>
+      <p class="movie-card__about--content"> Description Movie Four of the West’s most infamous outlaws assemble to
+        steal a huge stash of gold from the
+        most corrupt settlement of the gold rush towns. But not all goes to plan one is killed and the other three
+        escapes with bags of gold hide out in the abandoned gold mine where they happen across another gang of three –
+        who themselves were planning to hit the very same bank! As tensions rise, things go from bad to worse as they
+        realise the bags of gold are filled with lead... they’ve been double crossed – but by who and how?</p>
+      <div class="button-wrapper">
+        <button type="button" class="modal-button modal-button-watched">Add to watched</button>
+        <button type="button" class="modal-button modal-button-queue">Add to queue</button>
+      </div>
+    </div>
+  </div>
 </div>

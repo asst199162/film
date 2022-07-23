@@ -7,10 +7,10 @@ export function renderMovieCard(movies) {
 
 function createMovieCard(movies) {
   return movies
-    .map(({ poster_path, title, genre_ids, release_date }) => {
+    .map(({ poster_path, title, genre_ids, release_date, id }) => {
       const releaseDate = release_date?.slice(0, 4);
       const titleUp = title.toUpperCase();
-      return `<li class="gallery__item">
+      return `<li class="gallery__item" id=${id}>
       <a class="gallery__link" href="">
         <img
           class="gallery__img"
@@ -21,6 +21,7 @@ function createMovieCard(movies) {
         <p class="gallery__information">${getGenre(
           genre_ids
         )} | ${releaseDate}</p>
+
       </a>
     </li>`;
     })
