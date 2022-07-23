@@ -14,7 +14,6 @@ function createMovieCard(movies) {
       const genre = getGenre(genre_ids);
 
       return `<li class="gallery__item" id=${id}>
-      <a class="gallery__link" href="">
         <img
           class="gallery__img"
           src="${poster}"
@@ -22,8 +21,6 @@ function createMovieCard(movies) {
         />
         <p class="gallery__name">${titleUp}</p>
         <p class="gallery__information">${genre} | ${releaseDate}</p>
-
-      </a>
     </li>`;
     })
     .join('');

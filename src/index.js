@@ -1,4 +1,4 @@
-// import { getGenre } from './js/genresOfMovies';
+import { getGenre } from './js/genresOfMovies';
 import { onFirstLoadPage } from './js/onFirstLoadPage';
 import { onSubmitClick } from './js/onSubmitClick';
 // import * as createGallery from './js/createGallery';
@@ -9,4 +9,4 @@ import { onSubmitClick } from './js/onSubmitClick';
 // import * as onWatchedAndQueueClick from './js/onWatchedAndQueueClick';
 // import * as onAddToWatchedAndAddToQueueClick from './js/onAddToWatchedAndAddToQueueClick';
 // import * as loader from './js/loader';
-import * as modal from './js/modal';
+import { onModalOpen } from './js/modalOpenClose';
