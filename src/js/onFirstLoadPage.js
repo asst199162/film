@@ -1,7 +1,6 @@
-import { gallery } from './references';
 import { paginationHome } from './references';
 import { GetMovieApi } from './fetchMovies';
-import { createMovieCard } from './createGallery';
+import { renderMovieCard } from './createGallery';
 import { createNumeration } from './createNumeration';
 
 const getMovieApi = new GetMovieApi();
@@ -19,8 +18,4 @@ export async function onFirstLoadPage(event) {
   } catch (error) {
     console.log(error.message);
   }
-}
-
-function renderMovieCard(movies) {
-  gallery.insertAdjacentHTML('beforeend', createMovieCard(movies));
 }

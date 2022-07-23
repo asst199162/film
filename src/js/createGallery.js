@@ -1,9 +1,14 @@
+import { gallery } from './references';
 import { getGenre } from './genresOfMovies';
 
-export function createMovieCard(movies) {
+export function renderMovieCard(movies) {
+  gallery.innerHTML = createMovieCard(movies);
+}
+
+function createMovieCard(movies) {
   return movies
     .map(({ poster_path, title, genre_ids, release_date }) => {
-      const releaseDate = release_date.slice(0, 4);
+      const releaseDate = release_date?.slice(0, 4);
       const titleUp = title.toUpperCase();
       return `<li class="gallery__item">
       <a class="gallery__link" href="">

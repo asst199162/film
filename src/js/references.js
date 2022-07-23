@@ -1,4 +1,5 @@
-export const input = document.querySelector('[data-action="input"]');
+export const form = document.querySelector('[data-action="submit"]');
+export const noSuccess = document.querySelector('[data-ation="alert"]');
 export const gallery = document.querySelector('[data-gallery]');
 export const paginationHome = document.querySelector(
   '[data-pagination="home"]'

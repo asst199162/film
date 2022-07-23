@@ -1,6 +1,6 @@
 // import { getGenre } from './js/genresOfMovies';
 import { onFirstLoadPage } from './js/onFirstLoadPage';
-// import * as searchItems from './js/searchItems';
+import { onSubmitClick } from './js/onSubmitClick';
 // import * as createGallery from './js/createGallery';
 // import { createNumeration } from './js/createNumeration';
 // import * as onSubmitClick from './js/onSubmitClick';
