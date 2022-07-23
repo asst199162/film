@@ -1,6 +1,9 @@
 const genres = JSON.parse(localStorage.getItem('genres'));
 
 export function getGenre(genresIds) {
+  if (genresIds.length === 0) {
+    return 'no info';
+  }
   const genresNames = getGenresNames(genres, genresIds);
   if (genresNames.length > 3) {
     const filteredNames = filteredGenresNames(genresNames);
