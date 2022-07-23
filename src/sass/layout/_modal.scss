@@ -41,7 +41,6 @@
 
 img {
   display: block;
-  max-width: 100%;
   height: auto;
 }
 
@@ -64,7 +63,6 @@ img {
 
   &__item {
     display: block;
-    margin: auto;
   }
 
   &__poster {
@@ -141,11 +139,11 @@ img {
   }
 
   &__info--item:nth-child(3) h2 {
-    margin-right: 39px;
+    margin-right: 47px;
   }
 
   &__info--item:nth-child(4) h2 {
-    margin-right: 76px;
+    margin-right: 74px;
   }
 
   &__info--item:not(:last-child) {
@@ -175,9 +173,6 @@ img {
   }
 }
 
-.button-wrapper {
-  display: flex;
-}
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .movie-card {
@@ -192,6 +187,8 @@ img {
     }
 
     &__poster {
+      width: 240px;
+      height: 357px;
       margin-bottom: 30px;
     }
 
@@ -205,12 +202,14 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .movie-modal {
+    display: flex;
+  }
+}
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .movie-card {
-    // display: flex;
-    // justify-content: center;
-    // padding: 42px 28px 40px 30px;
     top: 50%;
     left: 50%;
     width: 618px;
@@ -228,8 +227,6 @@ img {
     }
 
     &__poster {
-      width: 264px;
-      height: 374px;
       object-fit: cover;
     }
 
@@ -246,21 +243,24 @@ img {
     }
 
     &__info--item:nth-child(3) h2 {
-      margin-right: 39px;
+      margin-right: 48px;
     }
 
     &__info--item:nth-child(4) h2 {
-      margin-right: 76px;
+      margin-right: 74px;
     }
   }
 
 }
 
 @media screen and (min-width: 1024px) {
+  .movie-modal {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .movie-card {
-    // display: flex;
-    // justify-content: center;
-    // padding: 50px 30px 40px 30px;
     top: 50%;
     left: 50%;
     width: 882px;
@@ -271,7 +271,6 @@ img {
     transform: translate(-50%, -50%);
 
     &__item {
-      // margin-left: 30px;
       width: 396px;
     }
 
@@ -280,9 +279,9 @@ img {
     }
 
     &__poster {
-      width: 396px;
+      width: 375px;
       height: 478px;
-      object-fit: cover;
+      object-fit: contain;
     }
 
     &__title {
@@ -307,13 +306,17 @@ img {
     }
 
     &__info--item:nth-child(3) h2 {
-      margin-right: 83px;
+      margin-right: 92px;
     }
 
     &__info--item:nth-child(4) h2 {
-      margin-right: 120px;
+      margin-right: 119px;
     }
   }
+}
+
+.button-wrapper {
+  display: flex;
 }
 
 .modal-button {
