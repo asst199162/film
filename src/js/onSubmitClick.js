@@ -14,7 +14,6 @@ form.addEventListener('submit', onSubmitClick);
 export function onSubmitClick(e) {
   e.preventDefault();
   inputValue = e.target.elements.text.value.trim();
-
   // Проверка инпута на пустую строку
   if (inputValue === '') {
     noSuccess.classList.add('visible');
