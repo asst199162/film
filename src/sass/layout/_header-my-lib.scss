@@ -1,0 +1,93 @@
+     .header-my-lib {
+         background-image: url(../images/images-header-lib/mob-background-library-1x.jpg);
+         background-position: center;
+         background-size: cover;
+         margin: 0 auto;
+         background-repeat: no-repeat;
+         @media screen and (min-width: 768px) {
+             background-image: url(../images/images-header-lib/tab-background-library-1x.jpg);
+         }
+         @media screen and (min-width: 1280px) {
+             background-image: url(../images/images-header-lib/desk-background-library-1x.jpg);
+         }
+     }
+     
+     .header-my-lib_container {
+         max-width: 100%;
+         padding-left: 20px;
+         padding-right: 20px;
+         margin-left: auto;
+         margin-right: auto;
+         @media screen and (min-width: 768px) {
+             width: 789px;
+         }
+         @media screen and (min-width: 1280px) {
+             width: 1280px;
+         }
+     }
+     
+     .header-my-lib_wrappper {
+         display: flex;
+         justify-content: space-between;
+     }
+     
+     .logo {
+         padding-top: 40px;
+     }
+     
+     .logo_svg {
+         margin-right: 8px;
+     }
+     
+     .logo_name {
+         color: #ffffff;
+         font-size: 30px;
+         line-height: 1.17;
+         @media screen and (max-width: 767px) {
+             position: absolute;
+             clip: rect(0 0 0 0);
+             width: 1px;
+             height: 1px;
+             margin: -1px;
+         }
+     }
+     
+     .nav_list {
+         padding-top: 49px;
+         display: flex;
+     }
+     
+     .nav_item:not(:last-child) {
+         margin-right: 40px;
+     }
+     
+     .nav_link {
+         position: relative;
+         text-transform: uppercase;
+         font-size: 12px;
+         line-height: 1.17;
+         color: #ffffff;
+     }
+     
+     .nav_link--current::after {
+         content: '';
+         display: block;
+         position: absolute;
+         bottom: -3px;
+         width: 100%;
+         height: 3px;
+         background-color: #ff0000;
+     }
+     
+     .button-wrapper {
+         display: flex;
+         justify-content: center;
+         margin-top: 15px;
+         padding: 42px;
+     }
+     
+     .blob-btn {
+         width: 148px;
+         height: 42px;
+         margin: 8px;
+     }
