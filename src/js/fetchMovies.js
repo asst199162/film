@@ -19,6 +19,7 @@ export class GetMovieApi {
       `${this.GENRES_URL}?api_key=${this.API_KEY}&language=en-US`
     );
     localStorage.setItem('genres', JSON.stringify(genresResp.data.genres));
+    localStorage.setItem('searchedMovies', JSON.stringify(data.results));
     return data;
   }
 
@@ -26,6 +27,7 @@ export class GetMovieApi {
     const response = await axios.get(
       `${this.SEARCH_URL}?api_key=${this.API_KEY}&query=${inputValue}&language=en&page=${this.page}`
     );
+    localStorage.setItem('searchedMovies', JSON.stringify(response.data.results));
     return response;
   }
 
