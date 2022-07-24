@@ -80,3 +80,9 @@ export function createNumeration(totalPages, page) {
   paginationHome.innerHTML = liTag; //додає тег li в тег ul
   return liTag; //повертає тег li
 }
+// const currentPagination = document.querySelector('ul[data-pagination="home"]');
+// console.log(currentPagination);
+// currentPagination.addEventListener('click', onPaginationClick);
+// function onPaginationClick(e) {
+//   console.log(e.target);
+// }
