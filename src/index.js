@@ -7,6 +7,6 @@ import { onSubmitClick } from './js/onSubmitClick';
 // import * as onPageNumerClick from './js/onPageNumerClick';
 // import * as onCardClick from './js/onCardClick';
 // import * as onWatchedAndQueueClick from './js/onWatchedAndQueueClick';
-// import * as onAddToWatchedAndAddToQueueClick from './js/onAddToWatchedAndAddToQueueClick';
+import * as onAddToWatchedAndAddToQueueClick from './js/onAddToWatchedAndAddToQueueClick';
 // import * as loader from './js/loader';
 import { onModalOpen } from './js/modalOpenClose';
