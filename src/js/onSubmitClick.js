@@ -3,7 +3,7 @@ import { noSuccess } from './references';
 import { paginationHome } from './references';
 import { renderMovieCard } from './createGallery';
 import { GetMovieApi } from './fetchMovies';
-import { createNumeration } from './createNumeration';
+import { renderNumerationOfHome } from './createNumeration';
 
 const getMovieApi = new GetMovieApi();
 export let inputValue = '';
@@ -22,11 +22,11 @@ export function onSubmitClick(e) {
     noSuccess.classList.remove('visible');
   }
   // Search movies
-  searchMovies(inputValue);
+  searchMoviesAndRender(inputValue);
   clearInput();
 }
 
-async function searchMovies(inputValue) {
+async function searchMoviesAndRender(inputValue) {
   try {
     getMovieApi.resetPage();
     const data = await getMovieApi.fetchSearchedMovie(inputValue);
@@ -35,20 +35,12 @@ async function searchMovies(inputValue) {
     }
     // Render gallery
     renderMovieCard(data.results);
-    createPagination(data);
+    renderNumerationOfHome(data.total_pages, data.page);
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 }
 
 function clearInput() {
   form.reset();
-}
-
-function createPagination(data) {
-  if (data.total_results > 0) {
-    paginationHome.innerHTML = createNumeration(data.total_pages, data.page);
-  } else {
-    paginationHome.innerHTML = '';
-  }
 }

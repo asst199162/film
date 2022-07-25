@@ -1,7 +1,7 @@
 import { paginationHome } from './references';
 import { GetMovieApi } from './fetchMovies';
 import { renderMovieCard } from './createGallery';
-import { createNumeration } from './createNumeration';
+import { renderNumerationOfHome } from './createNumeration';
 
 const getMovieApi = new GetMovieApi();
 
@@ -9,13 +9,10 @@ window.addEventListener('DOMContentLoaded', onFirstLoadPage);
 
 export async function onFirstLoadPage(event) {
   try {
-    const response = await getMovieApi.fetchPopularMovie();
-    renderMovieCard(response.results);
-    paginationHome.innerHTML = createNumeration(
-      response.total_pages,
-      response.page
-    );
+    const data = await getMovieApi.fetchPopularMovie();
+    renderMovieCard(data.results);
+    renderNumerationOfHome(data.total_pages, data.page);
   } catch (error) {
-    console.log(error.message);
+    console.error(error.message);
   }
 }

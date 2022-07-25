@@ -5,7 +5,7 @@ import { onSubmitClick } from './js/onSubmitClick';
 // import * as createGallery from './js/createGallery';
 // import { createNumeration } from './js/createNumeration';
 // import * as onSubmitClick from './js/onSubmitClick';
-import {onPageNumberClick} from './js/onPageNumerClick';
+import { onPageNumberClick } from './js/onPageNumberClick';
 // import * as onCardClick from './js/onCardClick';
 // import * as onWatchedAndQueueClick from './js/onWatchedAndQueueClick';
 // import * as onAddToWatchedAndAddToQueueClick from './js/onAddToWatchedAndAddToQueueClick';

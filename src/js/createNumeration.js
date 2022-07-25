@@ -1,4 +1,4 @@
-// import { paginationHome } from './references';
+import { paginationHome } from './references';
 // const element = document.querySelector('.pagination ul');
 // let totalPages = 25;
 // let page = 5;
@@ -82,7 +82,11 @@
 // }
 
 // My realization
-export function createNumeration(totalPages, page) {
+export function renderNumerationOfHome(totalPages, page) {
+  paginationHome.innerHTML = createNumeration(totalPages, page); //додає тег li в тег ul
+}
+
+function createNumeration(totalPages, page) {
   let liTag = '';
   let active;
   let beforePage = page - 1;
@@ -99,10 +103,10 @@ export function createNumeration(totalPages, page) {
 
   if (page > 2) {
     //якщо значення сторінки менше 2, додає 1 після попередньої кнопки
-    liTag += `<li class="first numb" data-totalPages="${totalPages}" data-page="1")"><span>1</span></li>`;
+    liTag += `<li class="first numb" data-totalPages="${totalPages}" data-page="1")">1</li>`;
     if (page > 3) {
       //якщо значення сторінки більше 3, додає (...) після першої li або сторінки
-      liTag += `<li class="dots"><span>...</span></li>`;
+      liTag += `<li class="dots">...</li>`;
     }
   }
 
@@ -135,16 +139,16 @@ export function createNumeration(totalPages, page) {
       //інакше залишає порожнім активну змінну
       active = '';
     }
-    liTag += `<li class="numb ${active}" data-totalPages="${totalPages}" data-page="${length}"><span>${length}</span></li>`;
+    liTag += `<li class="numb ${active}" data-totalPages="${totalPages}" data-page="${length}">${length}</li>`;
   }
 
   if (page < totalPages - 1) {
     //якщо значення сторінки менше значення totalPage на -1, тоді відображає останню li або сторінку
     if (page < totalPages - 2) {
       //якщо значення сторінки менше значення totalPage на -2, додає (...) перед останньою li або сторінкою
-      liTag += `<li class="dots"><span>...</span></li>`;
+      liTag += `<li class="dots">...</li>`;
     }
-    liTag += `<li class="last numb" data-totalPages="${totalPages}" data-page="${totalPages}"><span>${totalPages}</span></li>`;
+    liTag += `<li class="last numb" data-totalPages="${totalPages}" data-page="${totalPages}">${totalPages}</li>`;
   }
 
   if (page < totalPages) {
