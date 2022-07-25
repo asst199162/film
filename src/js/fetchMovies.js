@@ -5,7 +5,8 @@ export class GetMovieApi {
   constructor() {
     // <<api_key>>
     this.GENRES_URL = 'https://api.themoviedb.org/3/genre/movie/list';
-    this.POPULARE_URL = '/3/trending/movie/day';
+    this.POPULARE_URL = '/3/movie/popular'
+      // '/3/trending/movie/day';
     this.SEARCH_URL = 'https://api.themoviedb.org/3/search/movie';
     this.API_KEY = 'e331122fb787497311a69180baf8c75a';
     this.page = 1;
@@ -13,7 +14,7 @@ export class GetMovieApi {
 
   async fetchPopularMovie() {
     const { data } = await axios.get(
-      `${this.POPULARE_URL}?api_key=${this.API_KEY}`
+      `${this.POPULARE_URL}?api_key=${this.API_KEY}&language=en-US&page=${this.page}`
     );
     const genresResp = await axios.get(
       `${this.GENRES_URL}?api_key=${this.API_KEY}&language=en-US`
