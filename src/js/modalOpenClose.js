@@ -100,7 +100,7 @@ function onBtnWatchedClick(e) {
 function onQueueBtnClick(e) {
   if (!e.target.classList.contains('queued')) {
     if (JSON.parse(localStorage.getItem('queuedCard'))) {
-      watchedMovie = JSON.parse(localStorage.getItem('queuedCard'));
+      queuedMovie = JSON.parse(localStorage.getItem('queuedCard'));
     }
     queuedMovie.push(movie);
     localStorage.setItem('queuedCard', JSON.stringify(queuedMovie));
