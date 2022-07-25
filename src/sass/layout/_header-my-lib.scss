@@ -82,8 +82,11 @@
      .button-wrapper {
          display: flex;
          justify-content: center;
-         margin-top: 15px;
-         padding: 42px;
+         padding: 62px 0px;
+        @media screen and (min-width: 768px) {
+            padding-top: 60px;
+            padding-bottom: 40px;
+            }
      }
      
      .blob-btn {

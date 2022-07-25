@@ -1,6 +1,6 @@
 .lib-button {
-    width: 148px;
-    height: 42px;
+    width: 129px;
+    height: 44px;
     border-radius: 5px;
     font-family: 'Roboto';
     font-style: normal;
@@ -48,31 +48,31 @@
         background-color: var(--first-color);
         transform: translate3d(100%, -100px, 0) rotate3d(0, 0, 1, 90deg);
     }
+        @media screen and (min-width: 767px) {
+            .lib-button {
+                width: 129.53px;
+    
+                &:not(:last-child) {
+                    margin-right: 19px;
+                }
+    
+                &-watched {
+                    padding: 0 11px;
+                }
+            }
+        }
+    
+        @media screen and (min-width: 1023px) {
+            .lib-button {
+                width: 152px;
+    
+                &:not(:last-child) {
+                    margin-right: 32px;
+                }
+            }
+        }
 }
 
-@media screen and (max-width: 1023px) {
-    .lib-button {
-        width: 152px;
-
-        &:not(:last-child) {
-            margin-right: 32px;
-        }
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .lib-button {
-        width: 129.53px;
-
-        &:not(:last-child) {
-            margin-right: 19px;
-        }
-
-        &-watched {
-            padding: 0 11px;
-        }
-    }
-}
 
   .disabled { 
     color: var(--first-color);
