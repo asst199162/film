@@ -1,6 +1,9 @@
 import axios from 'axios';
 axios.defaults.baseURL = 'https://api.themoviedb.org';
 
+export let isFetchPopularMovie = false;
+export let isFetchSearchedMovie = false;
+
 export class GetMovieApi {
   constructor() {
     // <<api_key>>
@@ -20,17 +23,23 @@ export class GetMovieApi {
     );
     localStorage.setItem('genres', JSON.stringify(genresResp.data.genres));
     localStorage.setItem('searchedMovies', JSON.stringify(data.results));
+    isFetchPopularMovie = true;
+    isFetchSearchedMovie = false;
     return data;
   }
 
   async fetchSearchedMovie(inputValue) {
-    const response = await axios.get(
+    const { data } = await axios.get(
       `${this.SEARCH_URL}?api_key=${this.API_KEY}&query=${inputValue}&language=en&page=${this.page}`
     );
-    localStorage.setItem('searchedMovies', JSON.stringify(response.data.results));
-    return response;
+    localStorage.setItem('searchedMovies', JSON.stringify(data.results));
+    isFetchSearchedMovie = true;
+    isFetchPopularMovie = false;
+    return data;
   }
-
+  setPage(page) {
+    this.page = page;
+  }
   incrementPage() {
     this.page += 1;
   }

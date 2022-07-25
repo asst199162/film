@@ -6,7 +6,7 @@ import { GetMovieApi } from './fetchMovies';
 import { createNumeration } from './createNumeration';
 
 const getMovieApi = new GetMovieApi();
-let inputValue = '';
+export let inputValue = '';
 
 form.addEventListener('submit', onSubmitClick);
 
@@ -29,13 +29,13 @@ export function onSubmitClick(e) {
 async function searchMovies(inputValue) {
   try {
     getMovieApi.resetPage();
-    const response = await getMovieApi.fetchSearchedMovie(inputValue);
-    if (response.data.results.length === 0) {
+    const data = await getMovieApi.fetchSearchedMovie(inputValue);
+    if (data.results.length === 0) {
       noSuccess.classList.add('visible');
     }
     // Render gallery
-    renderMovieCard(response.data.results);
-    createPagination(response);
+    renderMovieCard(data.results);
+    createPagination(data);
   } catch (error) {
     console.log(error);
   }
@@ -45,12 +45,9 @@ function clearInput() {
   form.reset();
 }
 
-function createPagination(response) {
-  if (response.data.total_results > 0) {
-    paginationHome.innerHTML = createNumeration(
-      response.data.total_pages,
-      response.data.page
-    );
+function createPagination(data) {
+  if (data.total_results > 0) {
+    paginationHome.innerHTML = createNumeration(data.total_pages, data.page);
   } else {
     paginationHome.innerHTML = '';
   }
